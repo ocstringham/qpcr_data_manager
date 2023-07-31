@@ -4,7 +4,6 @@ library(htmltools)
 library(zip)
 
 library(reactable)
-library(flextable)
 
 library(readxl)
 library(dplyr)
