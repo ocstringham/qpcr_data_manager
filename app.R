@@ -1,23 +1,27 @@
 library(shiny)
 library(shinyWidgets)
-library(readxl)
+library(htmltools)
+library(zip)
+
 library(reactable)
+library(flextable)
+
+library(readxl)
 library(dplyr)
 library(readr)
 library(purrr)
 library(stringr)
 library(glue)
 library(lubridate)
-library(flextable)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
 library(sf)
-# library(mapview)
 library(leaflet)
 library(leaflet.extras2)
-library(htmltools)
-library(zip)
-library(ggplot2)
-library(tidyr)
-library(scales)
+
+
 
 # UI ----
 ui <- fluidPage(
