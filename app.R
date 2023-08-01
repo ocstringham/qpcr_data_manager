@@ -370,7 +370,7 @@ server <- function(input, output) {
   negSum = function(){
     all_data() %>%
       group_by(`Site Code`, `Sample No.`) %>%
-      filter(`Sample No.` == "N" || `Site Code` %in% c("ENC", "FNC")) %>% 
+      filter(`Sample No.` == "N" | `Site Code` %in% c("ENC", "FNC")) %>% 
       summarise(`Detection` = if_else(sum(detection) > 0, "Y", "N"), 
                 `# Detections/# Tech reps` = glue("{sum(detection)} / {n()}"),
                 .groups = 'drop')
@@ -389,7 +389,7 @@ server <- function(input, output) {
   standardsSum = function(){
     all_data() %>%
       group_by(Task, `Sample Name`) %>%
-      # filter(`Sample No.` == "N" || `Site Code` %in% c("ENC", "FNC")) %>% 
+      # filter(`Sample No.` == "N" | `Site Code` %in% c("ENC", "FNC")) %>% 
       filter(`Task` == "STANDARD") %>% 
       summarise(`Detection` = if_else(sum(detection) > 0, "Y", "N"), 
                 `# Detections/# Tech reps` = glue("{sum(detection)} / {n()}"),
