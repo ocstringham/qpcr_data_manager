@@ -38,6 +38,7 @@ RUN R -e "install.packages(c('shinyWidgets', 'htmltools', 'zip', 'reactable', 's
 
 # Copy the Shiny app files into the container
 COPY app.R /srv/shiny-server/qpcr_data_manager/
+COPY .git /srv/shiny-server/qpcr_data_manager/
 COPY .gitignore /srv/shiny-server/qpcr_data_manager/
 COPY .gitattributes /srv/shiny-server/qpcr_data_manager/
 COPY README.md /srv/shiny-server/qpcr_data_manager/
