@@ -37,11 +37,11 @@ RUN apt-get update && \
 RUN R -e "install.packages(c('shinyWidgets', 'htmltools', 'zip', 'reactable', 'scales', 'sf', 'leaflet', 'leaflet.extras2'), Ncpus=4)"
 
 # Copy the Shiny app files into the container
-COPY app.R /srv/shiny-server/
-COPY .gitignore /srv/shiny-server/
-COPY .gitattributes /srv/shiny-server/
-COPY README.md /srv/shiny-server/
-COPY qpcr_data_manager.Rproj /srv/shiny-server/
+COPY app.R /srv/shiny-server/qpcr_data_manager/
+COPY .gitignore /srv/shiny-server/qpcr_data_manager/
+COPY .gitattributes /srv/shiny-server/qpcr_data_manager/
+COPY README.md /srv/shiny-server/qpcr_data_manager/
+COPY qpcr_data_manager.Rproj /srv/shiny-server/qpcr_data_manager/
 
 # Expose the default Shiny Server port (3838)
 EXPOSE 3838
