@@ -1,0 +1,7 @@
+# Copy the Shiny app files into the container
+COPY app.R /srv/shiny-server/qpcr_data_manager/
+COPY .git/ /srv/shiny-server/qpcr_data_manager/.git/
+COPY .gitignore /srv/shiny-server/qpcr_data_manager/
+COPY .gitattributes /srv/shiny-server/qpcr_data_manager/
+COPY README.md /srv/shiny-server/qpcr_data_manager/
+COPY qpcr_data_manager.Rproj /srv/shiny-server/qpcr_data_manager/
