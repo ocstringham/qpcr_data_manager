@@ -26,7 +26,7 @@ library(leaflet.extras2)
 ui <- fluidPage(
   
   ## Title ----
-  titlePanel("qPCR Data Manager"),
+  titlePanel("qPCR Data Manager 3"),
 
   mainPanel(
     tabsetPanel(
