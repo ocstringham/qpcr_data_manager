@@ -37,7 +37,7 @@ RUN apt-get update && \
 RUN R -e "install.packages(c('shinyWidgets', 'htmltools', 'zip', 'reactable', 'scales', 'sf', 'leaflet', 'leaflet.extras2'), Ncpus=4)"
 
 # Clone the Shiny app from GitHub
-RUN git clone https://github.com/your-username/your-shiny-app.git /srv/shiny-server/qpcr_data_manager
+RUN git clone https://github.com/ocstringham/qpcr_data_manager /srv/shiny-server/qpcr_data_manager
 
 # Expose the default Shiny Server port (3838)
 EXPOSE 3838
