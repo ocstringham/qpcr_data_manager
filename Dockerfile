@@ -1,5 +1,5 @@
-# Add the docker.io/rocker/shiny-verse image
-FROM rocker/shiny-verse:latest
+# Add the docker.io/rocker/shiny-verse image, append docker.io/ for podman
+FROM docker.io/rocker/shiny-verse:latest
 
 # spatial libs: https://github.com/rocker-org/rocker-versioned2/blob/master/scripts/install_geospatial.sh
 RUN apt-get update \
